@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Todo App</title>
+</head>
+<body>
+    <main>
+        <div id="todo-cont">
+            <div id="todo-head">
+                <i class="fas fa-cog" onclick='(function(){ document.getElementById("settings").style.display = "block"; })();'></i>
+                <h3>Todo:</h3>
+                <i class="fas fa-plus" onclick="itemAdd()"></i>
+            </div>
+            
+            <div id="todo-items">
+            </div>
+        </div>
+        <div id="settings">
+            <div id="settings-header">
+                Einstellungen:
+                <i class="fas fa-times" onclick='(function(){ document.getElementById("settings").style.display = "none"; })();'></i>
+            </div>
+            <div id="settings-content">
+
+                <div class="settings-item" id="set-auto-delete">
+                    Einträge automatisch löschen
+                    <input type="checkbox" name="autoDelete" id="cb-auto-delete" onchange="checkSettings()">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

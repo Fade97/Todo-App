@@ -1,0 +1,151 @@
+*{
+    font-family: "Open Sans";
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#todo-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #c2c2c2;
+    
+    border-radius: 10px;
+    width: 300px;
+    min-height: 400px;
+}
+
+#todo-head{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#todo-head h3{
+    margin: 0;
+}
+
+#todo-head i{
+    align-self: flex-end;
+}
+
+#todo-items{
+    display: flex;
+    flex-grow: 10;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    margin-bottom: 10px;
+}
+
+.todo-item{
+    background: #b6e6e6;
+    height: fit-content;
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 16px;
+}
+
+.todo-item:nth-child(2){
+    background: #e6e6e6;
+}
+
+.todo-item .fa-circle{
+    float: right;
+}
+
+.todo-item .fa-check-circle{
+    float: right;
+}
+
+.todo-item .fa-trash{
+    float: left;
+    margin-right: 5px;
+}
+
+.todo-item-name{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+#settings{
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+}
+
+#settings-header{
+    display: flex;
+    width: calc(100% - 10px);
+    height: 30px;
+    justify-content: space-between;
+    align-content: center;
+    line-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    font-weight: bold;
+}
+
+#settings-header i{
+    font-size: 20px;
+    margin: auto 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-self: flex-end;
+}
+
+#settings-content{
+    box-sizing: border-box;
+    background: #e6e6e6ea;
+    height: calc(100% - 30px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.settings-item{
+    height: 30px;
+    line-height: 30px;
+}
+
+.settings-item input[type='checkbox']{
+    display: block;
+    height: 30px;
+    width: 18px;
+    margin: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+    float: right;
+}
